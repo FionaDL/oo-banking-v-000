@@ -21,7 +21,7 @@ class Transfer
       if @sender.valid?
         @receiver.balance += @amount
         @sender.balance -= @amount
-        @status = "complete"
+        @status ||= "complete"
       end
         if sender.valid? != true
         @status = rejected
